@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import MovieRow from './components/MovieRow.js'
 import './App.css';
 
 class App extends Component{
@@ -19,19 +20,7 @@ class App extends Component{
 
       movies.forEach((movie) => {
         console.log(movie.title)
-        const movieRow = <table key={movie.id}>
-              <tbody>
-                  <tr>
-                    <td>
-                        <img alt="poster" src={movie.poster_src}/>
-                    </td>
-
-                    <td>
-                        {movie.title}
-                    </td>
-                  </tr>
-              </tbody>
-        </table>
+        const movieRow = <MovieRow movie={movie}/>
       movieRows.push(movieRow)
       })
 
