@@ -10,17 +10,12 @@ class App extends Component{
     super(props)
 
     this.state = {}
-    this.performerSearch()
+    this.performerSearch("avengers")
   
   }
 
-
-  componentDidMount(){
-    this.performerSearch();
-  }
-
-  performerSearch(){
-      const urlString = "https://api.themoviedb.org/3/search/movie?query=avengers&api_key=6b82c27641d9b5858ef60d948329d46d";
+  performerSearch(search){
+      const urlString = "https://api.themoviedb.org/3/search/movie?query="+search+"&api_key=6b82c27641d9b5858ef60d948329d46d";
       $.ajax({
         url: urlString,
         success: (searchResult) => {
@@ -40,9 +35,16 @@ class App extends Component{
         },
 
         error: (xhr, status, err) => {
-          console.log("Failed to fetch data")
+          console.log ("Failed to fetch data")
         }
       })
+  }
+
+  searchChangeHandler(event){
+      console.log(event.target.value)
+      const boundObject = this
+      const searchTerm = event.target.value
+      boundObject.performerSearch(searchTerm)
   }
 
 
@@ -71,6 +73,7 @@ class App extends Component{
             paddingLeft:8,
             paddingBottom:16
           }} 
+          onChange={this.searchChangeHandler.bind(this)}
           placeholder="Search your movie here"/>
 
         <h3>{this.state.rows}</h3>
