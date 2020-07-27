@@ -10,36 +10,33 @@ class App extends Component{
     super(props)
 
     this.state = {}
-
-    // const movies = [
-    //   {id: 0, poster_src:"https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg", title: "Avengers, infinity war", overview: "This is the marvel movies and you can see it anytime and anywhere"},
-    //   {id: 1, poster_src:"https://image.tmdb.org/t/p/w185/z3lD286jY8iYasC5hJZ2kgZF9uY.jpg",title: "Avengers, End Games", overview: "This is the marvel movies and you can see it anytime and anywhere"},
-    //   {id: 2, poster_src:"https://image.tmdb.org/t/p/w185/da2AREjdecPInHzWeZ550X1aYDU.jpg", title: "Avengers, Ultron age", overview: "This is the marvel movies and you can see it anytime and anywhere"}
-
-    // ]
-
-
-    //   var movieRows = []
-
-    //   movies.forEach((movie) => {
-    //     console.log(movie.title)
-    //     const movieRow = <MovieRow movie={movie}/>
-    //   movieRows.push(movieRow)
-    //   })
-
-    //   this.state = {rows: movieRows}
     this.performerSearch()
   
   }
 
+
+  componentDidMount(){
+    this.performerSearch();
+  }
+
   performerSearch(){
-      const urlString = "https://api.themoviedb.org/3/search/movie?query=marvel&api_key=6b82c27641d9b5858ef60d948329d46d";
+      const urlString = "https://api.themoviedb.org/3/search/movie?query=avengers&api_key=6b82c27641d9b5858ef60d948329d46d";
       $.ajax({
         url: urlString,
         success: (searchResult) => {
           console.log("success fetching data")
           const results = searchResult.results
-          console.log(results[0])
+
+          var movieRows = []
+
+          results.forEach((movie) => {
+            movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path;
+             // console.log(movie.poster_path)
+              const movieRow = <MovieRow key={movie.id} movie={movie}/>
+              movieRows.push(movieRow)
+          })
+
+          this.setState({rows: movieRows})
         },
 
         error: (xhr, status, err) => {
