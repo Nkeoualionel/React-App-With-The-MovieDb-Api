@@ -10,8 +10,9 @@ class MovieRow extends Component {
                         </td>
 
                         <td>
-                            {this.props.movie.title}
+                            <h3>{this.props.movie.title}</h3>
                             <p>{this.props.movie.overview}</p>
+                            <input type="button" value="view"/>
                         </td>
                         </tr>
                     </tbody>
