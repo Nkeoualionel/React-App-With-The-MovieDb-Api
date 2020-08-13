@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React-App-With-The-MovieDb-Api/static/css/main.47470f99.chunk.css",
+    "main.js": "/React-App-With-The-MovieDb-Api/static/js/main.d63d6c6a.chunk.js",
+    "main.js.map": "/React-App-With-The-MovieDb-Api/static/js/main.d63d6c6a.chunk.js.map",
+    "runtime-main.js": "/React-App-With-The-MovieDb-Api/static/js/runtime-main.0db92b28.js",
+    "runtime-main.js.map": "/React-App-With-The-MovieDb-Api/static/js/runtime-main.0db92b28.js.map",
+    "static/js/2.5ef0a5d7.chunk.js": "/React-App-With-The-MovieDb-Api/static/js/2.5ef0a5d7.chunk.js",
+    "static/js/2.5ef0a5d7.chunk.js.map": "/React-App-With-The-MovieDb-Api/static/js/2.5ef0a5d7.chunk.js.map",
+    "index.html": "/React-App-With-The-MovieDb-Api/index.html",
+    "precache-manifest.85e8b051fc066fec682d88fbb8dc4868.js": "/React-App-With-The-MovieDb-Api/precache-manifest.85e8b051fc066fec682d88fbb8dc4868.js",
+    "service-worker.js": "/React-App-With-The-MovieDb-Api/service-worker.js",
+    "static/css/main.47470f99.chunk.css.map": "/React-App-With-The-MovieDb-Api/static/css/main.47470f99.chunk.css.map",
+    "static/js/2.5ef0a5d7.chunk.js.LICENSE.txt": "/React-App-With-The-MovieDb-Api/static/js/2.5ef0a5d7.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/React-App-With-The-MovieDb-Api/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0db92b28.js",
+    "static/js/2.5ef0a5d7.chunk.js",
+    "static/css/main.47470f99.chunk.css",
+    "static/js/main.d63d6c6a.chunk.js"
+  ]
+}
